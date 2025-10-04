@@ -3,7 +3,7 @@ package test2.vfxtest2.registry;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
-import net.minecraftforge.event.CreativeModeTabEvent;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -25,7 +25,7 @@ public final class ModItems {
         ITEMS.register(modEventBus);
     }
 
-    public static void addToCreativeTab(CreativeModeTabEvent.BuildContents event) {
+    public static void addToCreativeTab(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey().equals(CreativeModeTabs.TOOLS_AND_UTILITIES)) {
             event.accept(PARTICLE_SPAWNER);
         }

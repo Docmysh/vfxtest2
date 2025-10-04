@@ -1,6 +1,6 @@
 package test2.vfxtest2;
 
-import net.minecraftforge.event.CreativeModeTabEvent;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -16,7 +16,7 @@ public class Vfxtest2 {
         modEventBus.addListener(this::addCreative);
     }
 
-    private void addCreative(CreativeModeTabEvent.BuildContents event) {
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
         ModItems.addToCreativeTab(event);
     }
 }
